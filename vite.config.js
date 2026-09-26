@@ -4,5 +4,6 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: process.env.GITHUB_ACTIONS ? '/origamid-react-dogs/' : '/',
   plugins: [react(), svgr()],
 });
